@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51game Hack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background: linear-gradient(to bottom right, #e6f9f2, #c1e9db);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 360px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        /* Safe Tag */
+        .safe-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 15px;
+            border: 2px solid #388E3C;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            z-index: 10;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Header Section */
+        .header {
+            font-size: 15px;
+            color: #666;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .online-users {
+            color: #34a853;
+            font-weight: bold;
+        }
+
+        /* User Info */
+        .user-info {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* Logo and Title */
+        .logo img {
+            max-width: 120px;
+            margin: 0 auto;
+            display: block;
+        }
+        .title {
+            font-size: 18px;
+            color: #444;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        /* Instruction Boxes */
+        .instruction-box {
+            font-size: 15px;
+            color: #444;
+            background-color: #e6f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        /* Button Styling */
+        .button {
+            background-color: #e0f7fa;
+            color: #009688;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #b2dfdb;
+        }
+
+        /* Unique Button for Register */
+        .register-btn {
+            background-color: #ff7043;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .register-btn:hover {
+            background-color: #e64a19;
+        }
+
+        /* Details Section */
+        .details {
+            text-align: left;
+            font-size: 16px;
+        }
+        .details span {
+            font-weight: bold;
+        }
+        .details .mono {
+            font-family: monospace;
+        }
+
+        /* Fix Button Styling */
+        .fix-btn {
+            background-color: #009688;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .fix-btn:hover {
+            background-color: #00796b;
+        }
+    </style>
+</head>
+<body>
+<div class="safe-tag">100% Safe</div>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <span></span>
+        <span class="online-users">Online Users: <span id="online-users">9984</span></span>
+    </div>
+    
+    <!-- User Info -->
+    <div class="user-info" id="user-info">User 760****736 Win ₹49793</div>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="51.png" alt="91 Club Logo">
+    </div>
+    <div class="title">51game (hack)</div>
+
+    <!-- Input Section -->
+    <div class="input-group" id="period-input-group">
+        <span>Period:</span>
+        <input type="text" id="period-input" placeholder="Enter Period" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+    </div>
+
+    <!-- Fix Button -->
+    <button id="fix-btn" class="fix-btn" onclick="fixPeriod()">START</button>
+
+    <!-- Details Section -->
+    <div id="details-section" class="details" style="display: none;">
+        <p><span>Mode:</span> WinGo(1m)</p>
+        <p><span>Remaining Time:</span> <span id="remaining-time-display" class="mono"></span></p>
+        <p><span>Period:</span> <span id="period-display" class="mono"></span></p>
+        <p><span>Result:</span> <span id="result-display" style="font-weight: bold;"></span></p>
+    </div>
+
+    <!-- Instructions -->
+    <div class="instruction-box">
+        Create a new 51 game account by clicking on 'Register' button. If you use this mod in an old account, it may not work.
+    </div>
+    <div class="instruction-box">
+        'Register' बटन पर क्लिक करके एक नया account बनाएं। यदि आप इस मॉड का उपयोग पुराने account में करते हैं, तो यह काम नहीं करेगा।
+    </div>
+
+    <!-- Buttons -->
+    <button class="button register-btn" onclick="openRegister()">Register</button>
+    <button class="button" onclick="window.open('https://telegram.dog/EarningScripter1', '_blank')">Join Telegram</button>
+    <button class="button" onclick="window.open('https://telegram.dog/EarningScripter1_bot', '_blank')">Customer Care</button>
+</div>
+
+<script>
+    let lastMinutePeriod = -1;
+    let lastMinuteResult = -1;
+    let periodFixed = false;
+    let initialPeriod = 0;
+
+    const results = [
+        "0 (Small) Violet", "1 (Small) Green", "2 (Small) Red", "3 (Small) Green", "4 (Small) Red",
+        "5 (Big) Violet", "6 (Big) Red", "7 (Big) Green", "8 (Big) Red", "9 (Big) Green"
+    ];
+
+    // Update online users every second
+    function updateOnlineUsers() {
+        document.getElementById("online-users").textContent = Math.floor(Math.random() * 10000) + 20000;
+    }
+
+    // Update winning user
+    function updateWinningUser() {
+        const part1 = Math.floor(Math.random() * 361) + 620;
+        const part2 = Math.floor(Math.random() * 260) + 621;
+        document.getElementById("user-info").textContent = `User ${part1}***${part2} Win ₹${Math.floor(Math.random() * 50000)}`;
+    }
+
+    // Fix the period
+    function fixPeriod() {
+        const periodInput = document.getElementById("period-input").value;
+
+        if (periodInput && periodInput !== "") {
+            initialPeriod = parseInt(periodInput);
+            document.getElementById("period-display").textContent = initialPeriod;
+            periodFixed = true;
+            document.getElementById("details-section").style.display = 'block';
+            document.getElementById("fix-btn").style.display = 'none';
+            document.getElementById("period-input-group").style.display = 'none';
+        }
+    }
+
+    // Update the period every minute
+    function updatePeriod() {
+        const now = new Date();
+        const minute = now.getMinutes();
+
+        if (minute !== lastMinutePeriod) {
+            lastMinutePeriod = minute;
+
+            if (periodFixed) {
+                initialPeriod += 1; // Increment the fixed period by 1
+                document.getElementById("period-display").textContent = initialPeriod;
+            } else {
+                document.getElementById("period-display").textContent = minute; // Show current minute if not fixed
+            }
+        }
+    }
+
+    // Update remaining time
+    function updateRemainingTime() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        document.getElementById("remaining-time-display").textContent = `${59 - seconds}s`;
+    }
+
+    // Update results every minute
+    function updateResults() {
+        const now = new Date();
+        const minute = now.getMinutes();
+
+        if (minute !== lastMinuteResult) {
+            lastMinuteResult = minute;
+            const randomResult = Math.floor(Math.random() * results.length);
+            document.getElementById("result-display").textContent = results[randomResult];
+        }
+    }
+
+    // Realtime updates
+    setInterval(() => {
+        updateOnlineUsers();
+        updateWinningUser();
+        updatePeriod();
+        updateRemainingTime();
+        updateResults();
+    }, 1000);
+
+    // Open register link
+    function openRegister() {
+        window.open('https://colorsignup.github.io/ES1/51game', '_blank');
+    }
+</script>
+
+</body>
+</html>
